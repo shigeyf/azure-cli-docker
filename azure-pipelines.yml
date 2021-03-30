@@ -8,6 +8,9 @@ trigger:
 resources:
 - repo: self
 
+variables:
+  tag: '$(Rev:r)'
+
 stages:
 - stage: Build
   displayName: Build image
@@ -25,5 +28,5 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
-          '2.19.1_$(Rev:r)'
-          'latest'
+          $(Rev:r)
+          latest
