@@ -9,7 +9,7 @@ resources:
 - repo: self
 
 variables:
-  tag: '$(Rev:r)'
+  tag: '$(Build.BuildNumber)'
 
 stages:
 - stage: Build
@@ -28,5 +28,5 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
-          $(Rev:r)
+          $(Build.BuildNumber)
           latest
