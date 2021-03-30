@@ -25,5 +25,5 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
-          2.19.1_$(Rev:r)
-          latest
+          '2.19.1_$(Rev:r)'
+          'latest'
