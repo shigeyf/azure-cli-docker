@@ -28,5 +28,5 @@ stages:
         command: 'buildAndPush'
         Dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
-          $(Build.BuildNumber)
+          2.19.1.$(Build.BuildNumber)
           latest
